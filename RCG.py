@@ -33,6 +33,7 @@ class PlayerCharacter(object):
                       "Int":roll_stats(),
                       "Wis":roll_stats(),
                       "Cha":roll_stats()}
+		
     class spells():
         level_1 = []
         level_2 = []
@@ -51,6 +52,29 @@ class PlayerCharacter(object):
         for x in Job.proficiency:
             self.Proficiencies += Job.proficiency[x]
         #use for loop to grab list of proficiencies and 
+		
+#Player Race configuration options
+class PlayerRace():
+	class Human():
+		SkinColor = ["Light", "Medium", "Dark"]
+		Sex = ["Male", "Female"]
+		Height = []
+		Weight = []
+	class Goblin():
+		SkinColor = ["Green", "Yellow", "Brown"]
+		Sex = ["Male", "Female"]
+		Height = []
+		Weight = []
+	class Dwarf():
+		SkinColor = ["Light", "Medium", "Dark"]
+		Sex = ["Male", "Female"]
+		Height = []
+		Weight = []
+	class Orc():
+		SkinColor = ["Light Green", "Dark Green"]
+		Sex = ["Male", "Female"]
+		Height = []
+		Weight = []
         
 class PlayableJobs(object):
     class Barbarian():
