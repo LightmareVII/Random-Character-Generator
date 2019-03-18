@@ -17,6 +17,8 @@ class PlayerCharacter(object):
                       "Int":roll_stats(),
                       "Wis":roll_stats(),
                       "Cha":roll_stats()}
+        self.height = 0 #Inches
+        self.weight = 0 #Pounds
 
     class spells():
         level_1 = []
@@ -42,23 +44,19 @@ class PlayerRace():
 	class Human():
 		SkinColor = ["Light", "Medium", "Dark"]
 		Sex = ["Male", "Female"]
-		Height = []
-		Weight = []
+        Age_Max = 100
 	class Goblin():
 		SkinColor = ["Green", "Yellow", "Brown"]
 		Sex = ["Male", "Female"]
-		Height = []
-		Weight = []
+        Age_Max = 60
 	class Dwarf():
 		SkinColor = ["Light", "Medium", "Dark"]
 		Sex = ["Male", "Female"]
-		Height = []
-		Weight = []
+        Age_Max = 350
 	class Orc():
 		SkinColor = ["Light Green", "Dark Green"]
 		Sex = ["Male", "Female"]
-		Height = []
-		Weight = []
+        Age_Max = 50
 
 class PlayableJobs(object):
     class Barbarian():
