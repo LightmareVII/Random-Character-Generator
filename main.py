@@ -18,7 +18,8 @@ class PlayerCharacter(object):
                       "Con":roll_stats(),
                       "Int":roll_stats(),
                       "Wis":roll_stats(),
-                      "Cha":roll_stats()}
+                      "Cha":roll_stats(),
+                      "Hit":0}
         self.Height = 0 #Inches
         self.Weight = 0 #Pounds
 
