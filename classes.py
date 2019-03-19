@@ -37,9 +37,9 @@ def ChooseStats(Points):#This whole block needs to be tested - tested some, not 
     return Stats
 
 class PlayerRace(object):
-	class Human():
-		SkinColor = ["White", "Tan", "Black","Ginger"]
-		Sex = ["Male", "Female"]
+    class Human():
+        SkinColor = ["White", "Tan", "Black","Ginger"]
+        Sex = ["Male", "Female"]
         Speed = 30
         Languages = ['Common','Extra']
         class PhysicalTraits():
@@ -61,8 +61,8 @@ class PlayerRace(object):
 
     class Dwarf():
         Name = "Dwarf"
-    	SkinColor = ["White", "Tan", "Black","Ginger"]
-    	Sex = ["Male", "Female"]
+        SkinColor = ["White", "Tan", "Black","Ginger"]
+        Sex = ["Male", "Female"]
         Speed = 25
         Languages = ["Common","Dwarvish"]
         Stats = {"Con":2}
@@ -84,15 +84,15 @@ class PlayerRace(object):
             class Mountain():
                 Name = "Mountain Dwarf"
 
-	class Goblin():
+    class Goblin():
         Name = "Goblin"
-		SkinColor = ["Green", "Yellow", "Brown"]
-		Sex = ["Male", "Female"]
+        SkinColor = ["Green", "Yellow", "Brown"]
+        Sex = ["Male", "Female"]
 
-	class Orc():
+    class Orc():
         Name = "Orc"
-		SkinColor = ["Light Green", "Dark Green"]
-		Sex = ["Male", "Female"]
+        SkinColor = ["Light Green", "Dark Green"]
+        Sex = ["Male", "Female"]
 
     class HalfOrc():
         Name = "Half Orc"
