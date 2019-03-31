@@ -1,4 +1,4 @@
-import classes #This isn't gonna work...how to do?
+import classes
 import random
 #########################################################################
 def roll_stats():
@@ -12,14 +12,15 @@ def roll_stats():
         num += rolls[x]
     return num
 
-class PlayerCharacter(object):
+class PlayerCharacter(object):#Most of this may change...god damn it for not planning anything
     def __init__(self,Name,Job,Race):
         self.PlayerName = Name
         self.PlayerJob = Job.Name
         self.PlayerRace = Race.Name
+        self.PlayerSubrace = Race.Subrace.Name
         self.Proficiencies = []
         #self.Background
-        #self.PlayerSubclass = Class.Subclass
+        #self.PlayerSubclass = Classes.Subclass
         self.PlayerLevel = 1
         self.ProficiencyBonus = 2
         self.ProficientStats = []
@@ -34,7 +35,7 @@ class PlayerCharacter(object):
         self.Height = 0 #Inches
         self.Weight = 0 #Pounds
 
-    class spells():
+    class Spells():
         level_1 = []
         level_2 = []
         level_3 = []
@@ -44,12 +45,22 @@ class PlayerCharacter(object):
         level_7 = []
         level_8 = []
         level_9 = []
+        
+    class Feats():
+        FeatNames = []
+        FeatBonuses = []
+        
+    def AddFeats(self,Feat):
+        self.FeatNames += Feat.Name
+        self.AddStats(Feat.Stats)
+        for i in Feat.Bonuses:
+            self.FeatBonuses.append(Feat.Bonuses[i])
 
-    def Add_Stats(self,StatDict):
+    def AddStats(self,StatDict):
         for Stat in StatDict:
             self.Stats[Stat] += StatDict[Stat]
 
-    def Add_Proficiency(self,Job):
+    def AddProficiency(self,Job):
         for x in Job.proficiency:
             self.Proficiencies += Job.proficiency[x]
         #use for loop to grab list of proficiencies and

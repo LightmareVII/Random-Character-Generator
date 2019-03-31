@@ -2,6 +2,8 @@ import random
 #Classes
 #Race Information Source http://gdnd.wikidot.com/races
 #Class Information Source http://gdnd.wikidot.com/classes
+#Feat Information Source http://gdnd.wikidot.com/feats
+#Background Information Source http://gdnd.wikidot.com/backgrounds
 #Player Race configuration options
 def ChooseStats(Points):#This whole block needs to be tested - tested some, not all
     Options = ["Str","Dex","Con","Int","Wis","Cha"]
@@ -342,11 +344,15 @@ class PlayerJobs(object):
             Weapons = []
             Tools = []
             
+class PlayerBackground():
+    class Hermit():
+        Name = "Hermit"
+
 class Feats():
     class Actor():
         Name = "Actor"
         Stats = {"Cha":1}
-        Feats = ["You can mimic the speech of another person or the sounds\
+        Bonuses = ["You can mimic the speech of another person or the sounds\
                  made by other creatures. You must have heard the person\
                  speaking, or heard the creature make the sound, for at least\
                  1 minute. A successful Wisdom (Insight) check contested by your\
