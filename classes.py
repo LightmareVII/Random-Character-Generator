@@ -5,36 +5,37 @@ import random
 #Player Race configuration options
 def ChooseStats(Points):#This whole block needs to be tested - tested some, not all
     Options = ["Str","Dex","Con","Int","Wis","Cha"]
-    Stats = {}
+    ReturnStats = {}
     statarray = []
     num = 1
-    Count = int(Points)
+    Count = Points
     for x in Options:
-        print(num, ". ", x) #Don't think this will work - want it to print ex. 1. Str <newline> 2. Dex <newline> etc...
+        print(num, ". ", x)
         num += 1
     while Count > 0:
         add = input("Choose a stat to increase: ")
         while add.isdigit == 0:
             add = input("Selection must be a number...")
+        add = int(add)
         if add == 1:
-            statarray.push("Str")
+            statarray.append("Str")
         elif add == 2:
-            statarray.push("Dex")
+            statarray.append("Dex")
         elif add == 3:
-            statarray.push("Con")
+            statarray.append("Con")
         elif add == 4:
-            statarray.push("Int")
+            statarray.append("Int")
         elif add == 5:
-            statarray.push("Wis")
+            statarray.append("Wis")
         elif add == 6:
-            statarray.push("Cha")
-    Count -= 1
+            statarray.append("Cha")
+        Count -= 1
     for x in statarray:
-        if x in Stats:
-            Stats[x] += 1
+        if x in ReturnStats:
+            ReturnStats[x] += 1
         else:
-            Stats[x] = 1
-    return Stats
+            ReturnStats[x] = 1
+    return ReturnStats
 
 class PlayerRace(object):
     class Human():
@@ -57,7 +58,7 @@ class PlayerRace(object):
                 Stats = {"Str":1,"Dex":1,"Con":1,"Int":1,"Wis":1,"Cha":1}
             class Variant():
                 Name = "Human"
-                Stats = ChooseStats(2)
+                Stats = [] #if this race is chosen, use ChooseStats(2) in main.py
 
     class Dwarf():
         Name = "Dwarf"
@@ -88,32 +89,172 @@ class PlayerRace(object):
         Name = "Goblin"
         SkinColor = ["Green", "Yellow", "Brown"]
         Sex = ["Male", "Female"]
+        #Speed = 
+        #Languages = []
+        #Stats = {}
+        #Traits = []
+        #class PhysicalTraits():
+            #Age = random.randint()
+            #Height = random.randint()
+            #Weight = random.randint()
+            #Size = "Medium"
+        #class Proficiency():
+            #Armor = []
+            #Weapons = []
+            #Tools = []
+        #class subclass():            
 
     class Orc():
         Name = "Orc"
         SkinColor = ["Light Green", "Dark Green"]
         Sex = ["Male", "Female"]
+        #Speed = 
+        #Languages = []
+        #Stats = {}
+        #Traits = []
+        #class PhysicalTraits():
+            #Age = random.randint()
+            #Height = random.randint()
+            #Weight = random.randint()
+            #Size = "Medium"
+        #class Proficiency():
+            #Armor = []
+            #Weapons = []
+            #Tools = []
+        #class subclass():
 
     class HalfOrc():
         Name = "Half Orc"
+        #SkinColor = []
+        #Sex = ["Male","Female"]
+        #Speed = 
+        #Languages = []
+        #Stats = {}
+        #Traits = []
+        #class PhysicalTraits():
+            #Age = random.randint()
+            #Height = random.randint()
+            #Weight = random.randint()
+            #Size = "Medium"
+        #class Proficiency():
+            #Armor = []
+            #Weapons = []
+            #Tools = []
+        #class subclass():
 
     class Dragonborn():
         Name = "Dragonborn"
+        #SkinColor = []
+        #Sex = ["Male","Female"]
+        #Speed = 
+        #Languages = []
+        #Stats = {}
+        #Traits = []
+        #class PhysicalTraits():
+            #Age = random.randint()
+            #Height = random.randint()
+            #Weight = random.randint()
+            #Size = "Medium"
+        #class Proficiency():
+            #Armor = []
+            #Weapons = []
+            #Tools = []
+        #class subclass():
 
     class Elf():
         Name = "Elf"
+        #SkinColor = []
+        #Sex = ["Male","Female"]
+        #Speed = 
+        #Languages = []
+        #Stats = {}
+        #Traits = []
+        #class PhysicalTraits():
+            #Age = random.randint()
+            #Height = random.randint()
+            #Weight = random.randint()
+            #Size = "Medium"
+        #class Proficiency():
+            #Armor = []
+            #Weapons = []
+            #Tools = []
+        #class subclass():
 
     class HalfElf():
         Name = "Half Elf"
+        #SkinColor = []
+        #Sex = ["Male","Female"]
+        #Speed = 
+        #Languages = []
+        #Stats = {}
+        #Traits = []
+        #class PhysicalTraits():
+            #Age = random.randint()
+            #Height = random.randint()
+            #Weight = random.randint()
+            #Size = "Medium"
+        #class Proficiency():
+            #Armor = []
+            #Weapons = []
+            #Tools = []
+        #class subclass():
 
     class Gnome():
         Name = "Gnome"
+        #SkinColor = []
+        #Sex = ["Male","Female"]
+        #Speed = 
+        #Languages = []
+        #Stats = {}
+        #Traits = []
+        #class PhysicalTraits():
+            #Age = random.randint()
+            #Height = random.randint()
+            #Weight = random.randint()
+            #Size = "Medium"
+        #class Proficiency():
+            #Armor = []
+            #Weapons = []
+            #Tools = []
+        #class subclass():
 
     class Halfling():
         Name = "Halfling"
+        #SkinColor = []
+        #Sex = ["Male","Female"]
+        #Speed = 
+        #Languages = []
+        #Stats = {}
+        #Traits = []
+        #class PhysicalTraits():
+            #Age = random.randint()
+            #Height = random.randint()
+            #Weight = random.randint()
+            #Size = "Medium"
+        #class Proficiency():
+            #Armor = []
+            #Weapons = []
+            #Tools = []
+        #class subclass():
 
     class Tiefling():
         Name = "Tiefling"
+        #SkinColor = []
+        #Sex = ["Male","Female"]
+        #Speed = 
+        #Languages = []
+        #Stats = {}
+        #Traits = []
+        #class PhysicalTraits():
+            #Age = random.randint()
+            #Height = random.randint()
+            #Weight = random.randint()
+            #Size = "Medium"
+        #class Proficiency():
+            #Armor = []
+            #Weapons = []
+            #Tools = []
+        #class subclass():
 
 class PlayerJobs(object):
     class Barbarian():
@@ -200,3 +341,14 @@ class PlayerJobs(object):
             Armor = []
             Weapons = []
             Tools = []
+            
+class Feats():
+    class Actor():
+        Name = "Actor"
+        Stats = {"Cha":1}
+        Feats = ["You can mimic the speech of another person or the sounds\
+                 made by other creatures. You must have heard the person\
+                 speaking, or heard the creature make the sound, for at least\
+                 1 minute. A successful Wisdom (Insight) check contested by your\
+                 Charisma (Deception) check allows a listener to determine that \
+                 the effect is faked."]

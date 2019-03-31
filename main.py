@@ -1,6 +1,17 @@
-import classes.py #This isn't gonna work...how to do?
-import functions.py #This isn't gonna work...how to do?
+import classes #This isn't gonna work...how to do?
+import random
 #########################################################################
+def roll_stats():
+    rolls = []
+    num = 0
+    for x in range(4):
+        rolls.append(random.randint(1,6))
+    rolls.sort()
+    rolls.reverse()
+    for x in range(3):
+        num += rolls[x]
+    return num
+
 class PlayerCharacter(object):
     def __init__(self,Name,Job,Race):
         self.PlayerName = Name
@@ -34,10 +45,12 @@ class PlayerCharacter(object):
         level_8 = []
         level_9 = []
 
-    def Add_Stats(self,stat,amount):
-        stat += amount #NEED TO FIGURE THIS OUT
+    def Add_Stats(self,StatDict):
+        for Stat in StatDict:
+            self.Stats[Stat] += StatDict[Stat]
 
     def Add_Proficiency(self,Job):
         for x in Job.proficiency:
             self.Proficiencies += Job.proficiency[x]
         #use for loop to grab list of proficiencies and
+
